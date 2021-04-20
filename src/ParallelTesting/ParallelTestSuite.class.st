@@ -62,7 +62,7 @@ ParallelTestSuite >> tearDown [
 ParallelTestSuite >> testPool [
 
 	^ testPool ifNil: [ 
-		  self testPoolSize: DefaultParallelTestingPoolSize ]
+		  self testPoolSize: self class defaultParallelTestingPoolSize ]
 ]
 
 { #category : #accessing }
