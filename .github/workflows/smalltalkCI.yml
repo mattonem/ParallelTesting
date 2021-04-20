@@ -30,6 +30,8 @@ jobs:
       - uses: hpi-swa/setup-smalltalkCI@v1
         with:
           smalltalk-image: ${{ matrix.smalltalk }}
+          smalltalkCI-source: 'mattonem/smalltalkCI'
+          smalltalkCI-branch: 'patch-4'
       - name: Run tests
         run: smalltalkci -s ${{ matrix.smalltalk }}
         shell: bash
