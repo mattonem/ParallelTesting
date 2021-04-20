@@ -12,7 +12,7 @@ Class {
 
 { #category : #accessing }
 ParallelTestSuite class >> defaultParallelTestingPoolSize [
-	^ DefaultParallelTestingPoolSize
+	^ DefaultParallelTestingPoolSize ifNil: [ DefaultParallelTestingPoolSize := 10 ]
 ]
 
 { #category : #accessing }
