@@ -1,0 +1,12 @@
+SmalltalkCISpec {
+  #name : 'ParallelTesting', 
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'ParallelTesting',
+      #directory : 'src',
+      #load : [ 'tests' ],
+      #onConflict : #useIncoming,
+      #platforms : [ #pharo ]
+    }
+  ]
+}
