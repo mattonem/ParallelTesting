@@ -13,5 +13,14 @@ BaselineOfParallelTesting >> baseline: spec [
 			baseline: 'TaskIt'
 			with: [ 
 			spec repository: 'github://pharo-contributions/taskit:master' ].
-		spec package: #ParallelTesting ]
+		spec
+			package: #ParallelTesting
+			with: [ spec requires: #TaskIt ].
+		spec
+			package: #'ParallelTesting-Tests'
+			with: [ spec requires: #ParallelTesting ] ].
+	spec
+		group: 'core' with: #( ParallelTesting );
+		group: 'tests' with: #( 'ParallelTesting-Tests' );
+		group: 'default' with: #( 'ParallelTesting-Tests' )
 ]
