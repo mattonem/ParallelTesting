@@ -31,7 +31,7 @@ jobs:
         with:
           smalltalk-image: ${{ matrix.smalltalk }}
           smalltalkCI-source: 'mattonem/smalltalkCI'
-          smalltalkCI-branch: 'patch-4'
+          smalltalkCI-branch: 'patch-5'
       - name: Run tests
         run: smalltalkci -s ${{ matrix.smalltalk }}
         shell: bash
