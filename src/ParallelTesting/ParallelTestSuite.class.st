@@ -12,7 +12,11 @@ Class {
 
 { #category : #accessing }
 ParallelTestSuite class >> defaultParallelTestingPoolSize [
-	^ DefaultParallelTestingPoolSize ifNil: [ DefaultParallelTestingPoolSize := 10 ]
+
+	^ DefaultParallelTestingPoolSize ifNil: [ 
+		  Smalltalk os environment
+			  at: 'PHARO_PARALLEL_TESTING_POOL_SIZE'
+			  ifAbsent: [ 10 ] ]
 ]
 
 { #category : #accessing }
